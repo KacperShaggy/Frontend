@@ -1,0 +1,97 @@
+:root {
+    --color-main: #fff;
+    --color-points: hsl(229, 25%, 31%);
+    --color-score: hsl(229, 64%, 46%);
+    --color-border: hsl(217, 16%, 45%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vh;
+    background: radial-gradient(at top,
+            hsl(214, 47%, 23%),
+            hsl(237, 49%, 15%));
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+header {
+    border: solid 2px var(--color-border);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 48px auto;
+    padding: 12px 24px;
+    align-items: center;
+}
+
+h1 span {
+    display: block;
+    line-height: 25px;
+}
+
+h1 {
+    color: var(--color-main);
+}
+
+.score {
+    background: var(--color-main);
+    padding: 12px 48px;
+    border-radius: 8px;
+}
+
+.score span {
+    color: var(--color-score);
+}
+
+.points {
+    color: var(--color-points);
+    display: block;
+    font-size: 54px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 160px 0 ;
+}
+
+.options {
+    aspect-ratio: 313 / 278;
+    background-image: url(images/bg-triangle.svg);
+    background-size: cover;
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+}
+
+.options .button {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+    width: 50%;
+}
+
+.button--paper {
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.button--scissors {
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+}
+
+.button--rock {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
