@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;600;700&display=swap');
+    </style>
+    <script src="sources/alphabet.js"></script>
+    <script src="sources/word-list.js"></script>
+    <script src="script.js"></script>
+    <title>Hangman</title>
+</head>
+<body>
+    <h1 class="main-title">Gra w wisielca</h1>
+    <div id="contariner">
+        <div id="word"></div>
+        <div id="hint"></div>
+        <div id="hangman"><img src="images/hangman-0.svg" alt=""></div>
+        <div id="letters"></div>
+    </div>
+    <div id="buttons">
+        <button onclick="showHint();">Pokaż podopowiedź</button>
+        <button class="know" onclick="guess();">Wiesz? Odgadnij hasło!</button>
+    </div>
+    <div class="music">
+        <span>MUZYKA</span><br>
+        <button onclick="play();">PLAY</button>
+        <button onclick="stop();">STOP</button>
+    </div>
+</body>
+</html>
