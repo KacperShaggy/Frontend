@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="textarea" id="txta" cols="30" rows="10"></textarea>
+    <br>
+    <input type="text" placeholder="Szukana fraza" id="szukane"><br>
+    <button id="search" onclick="Sprawdz()">Szukaj</button>
+    <div id="wiad"></div>
+</body>
+<script>
+    function Sprawdz(){
+        var tekst = document.getElementById('txta').value;
+        var szukane = document.getElementById('szukane').value.toLowerCase();
+    if(tekst.search(szukane) != -1) {
+        var index = tekst.indexOf(szukane) + 1;
+        document.getElementById("wiad").innerHTML = 'Znaleziono fraze: ' + szukane + ' o indexie ' + index;
+        var zaznaczone = "<span class= 'zazn'" + szukane + "</span>" 
+        document.getElementById("txta").innerHTML = document.getElementById("txta").innerHTML.replace(new RegExp(szukane, "g"), zaznaczone)
+    }
+    else {
+        document.getElementById("wiad").innerHTML = "Nie znaleziono literki";
+    }
+    }   
+
+</script>
+</html>
