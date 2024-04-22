@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="txt" id="txt" cols="30" rows="10"></textarea>
+    <br><input id="szukane" type="text">
+    <br><input id="change" type="text">
+    <br><button onclick="Sprawdz()">Szukaj</button>
+    <br><button onclick="SzukajPierwszyIZamien()">Szukaj pierwszy i zamień</button>
+    <br><button onclick="SzukajWszystkieIZamien()">Szukaj wszystkie i zamien (Upper/Lower)</button>
+    <br><button onclick="UsunSlowo()">Usuń słowo</button>
+    <div id="wiad"></div>
+
+    <script>
+        function Sprawdz(){
+            var tekst = document.getElementById('txt').value;
+            var szukane = document.getElementById('szukane').value.toLowerCase();
+            var zamien = document.getElementById("change").value.toLowerCase();
+            
+            if(tekst.search(szukane) != -1) {
+                var index = tekst.indexOf(szukane) + 1;
+                document.getElementById("wiad").innerHTML = 'Znaleziono frazę: ' + szukane + ' o indeksie ' + index;
+                document.getElementById("txt").value.innerHTML = tekst.replace(new RegExp(szukane, "g"), "<span class='zazn'>" + szukane + "</span>");
+            } else {
+                document.getElementById("wiad").innerHTML = "Nie znaleziono frazy";
+            }
+        }   
+
+        function SzukajPierwszyIZamien(){
+            var tekst = document.getElementById('txt').value;
+            var szukane = document.getElementById('szukane').value.toLowerCase();
+            var zamien = document.getElementById("change").value.toLowerCase();
+            
+            if(tekst.search(szukane) != -1) {
+                tekst = tekst.replace(szukane, zamien);
+                document.getElementById("txt").value = tekst;
+                document.getElementById("wiad").innerHTML = 'Znaleziono i zamieniono pierwsze wystąpienie frazy.';
+            } else {
+                document.getElementById("wiad").innerHTML = "Nie znaleziono frazy.";
+            }
+        }
+
+        function SzukajWszystkieIZamien(){
+            var tekst = document.getElementById('txt').value;
+            var szukane = document.getElementById('szukane').value;
+            var zamien = document.getElementById("change").value;
+            var upperCase = true; 
+
+
+            if (szukane === szukane.toUpperCase()) {
+                    upperCase = false;
+                } else if (szukane === szukane.toLowerCase()) {
+                    upperCase = true;
+            
+            
+            if(upperCase){
+                tekst = tekst.replace(new RegExp(szukane, "gi"), zamien.toUpperCase());
+            } else {
+                tekst = tekst.replace(new RegExp(szukane, "gi"), zamien.toLowerCase());
+            }
+
+            document.getElementById("txt").value = tekst;
+            document.getElementById("wiad").innerHTML = 'Zamieniono wszystkie wystąpienia frazy.';
+        } 
+
+        function UsunSlowo(){
+            var tekst = document.getElementById('txt').value;
+            var szukane = document.getElementById('szukane').value;
+            var regex = new RegExp(szukane, "gi");
+
+            if(tekst.match(regex)){
+                tekst = tekst.replace(regex, "");
+                document.getElementById("txt").value = tekst;
+                document.getElementById("wiad").innerHTML = 'Usunięto wszystkie wystąpienia frazy.';
+            } else {
+                document.getElementById("wiad").innerHTML = "Nie znaleziono frazy do usunięcia.";
+            }
+        }}
+    </script>
+</body>
+</html>
