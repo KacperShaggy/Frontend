@@ -1,0 +1,328 @@
+@keyframes pulse {
+    0% {
+        background: radial-gradient(ellipse at center, #16bbcb 10%, #dbf8fa 60%);
+    }
+    4% {
+        background: radial-gradient(ellipse at center, #16bbcb 11%, #dbf8fa 61%);
+    }
+    8% {
+        background: radial-gradient(ellipse at center, #16bbcb 12%, #dbf8fa 62%);
+    }
+    12% {
+        background: radial-gradient(ellipse at center, #16bbcb 13%, #dbf8fa 63%);
+    }
+    16% {
+        background: radial-gradient(ellipse at center, #16bbcb 14%, #dbf8fa 64%);
+    }
+    20% {
+        background: radial-gradient(ellipse at center, #16bbcb 15%, #dbf8fa 65%);
+    }
+    24% {
+        background: radial-gradient(ellipse at center, #16bbcb 16%, #dbf8fa 66%);
+    }
+    28% {
+        background: radial-gradient(ellipse at center, #16bbcb 17%, #dbf8fa 67%);
+    }
+    32% {
+        background: radial-gradient(ellipse at center, #16bbcb 18%, #dbf8fa 68%);
+    }
+    36% {
+        background: radial-gradient(ellipse at center, #16bbcb 19%, #dbf8fa 69%);
+    }
+    40% {
+        background: radial-gradient(ellipse at center, #16bbcb 20%, #dbf8fa 70%);
+    }
+    44% {
+        background: radial-gradient(ellipse at center, #16bbcb 21%, #dbf8fa 71%);
+    }
+    48% {
+        background: radial-gradient(ellipse at center, #16bbcb 22%, #dbf8fa 72%);
+    }
+    52% {
+        background: radial-gradient(ellipse at center, #16bbcb 23%, #dbf8fa 73%);
+    }
+    56% {
+        background: radial-gradient(ellipse at center, #16bbcb 24%, #dbf8fa 74%);
+    }
+    60% {
+        background: radial-gradient(ellipse at center, #16bbcb 25%, #dbf8fa 75%);
+    }
+    64% {
+        background: radial-gradient(ellipse at center, #16bbcb 26%, #dbf8fa 76%);
+    }
+    68% {
+        background: radial-gradient(ellipse at center, #16bbcb 27%, #dbf8fa 77%);
+    }
+    72% {
+        background: radial-gradient(ellipse at center, #16bbcb 28%, #dbf8fa 78%);
+    }
+    76% {
+        background: radial-gradient(ellipse at center, #16bbcb 29%, #dbf8fa 79%);
+    }
+    80% {
+        background: radial-gradient(ellipse at center, #16bbcb 30%, #dbf8fa 80%);
+    }
+    84% {
+        background: radial-gradient(ellipse at center, #16bbcb 31%, #dbf8fa 81%);
+    }
+    88% {
+        background: radial-gradient(ellipse at center, #16bbcb 32%, #dbf8fa 82%);
+    }
+    92% {
+        background: radial-gradient(ellipse at center, #16bbcb 33%, #dbf8fa 83%);
+    }
+    96% {
+        background: radial-gradient(ellipse at center, #16bbcb 34%, #dbf8fa 84%);
+    }
+    100% {
+        background: radial-gradient(ellipse at center, #16bbcb 35%, #dbf8fa 85%);
+    }
+}
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    height: 100vh;
+    background-image: url('VF-logo.jpg');
+    background-size: contain;
+    background-position: right;
+
+}
+
+div, p{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    opacity: 0.9;
+    border-radius: 15px;
+    width: 1600px;
+    background: radial-gradient(#ffffff, #e2e2e2);
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.21);
+    padding: 20px;
+    
+}
+.logo{
+    border-radius: 5%;
+    width: 300px;
+    height: 145px;
+    background-image: url('VF-logo.jpg');
+    background-size: cover;
+    margin: 10px auto;
+    margin-bottom: -20px;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.21);
+}
+
+.button {
+    position: relative;
+}
+
+.timer{
+    text-align: center;
+    letter-spacing: -5px;
+    display: flex;
+    justify-content: center;
+    font-weight: 20px;
+    font-size: 230px;
+    color: #000000;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19);
+}
+
+.timer-dots{
+  margin: 0 1vh;
+}
+
+.sexyline{
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0), #dadada, rgba(255, 255, 255, 0));
+}
+
+.timeleft{
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 25px;
+    text-align: center;
+    color:   #16bbcb ;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.19);
+}
+
+.timeleft-stoper{
+display: none;
+}
+.timeleft-ended{
+    display: none;
+    }
+    
+
+.timetypebuttons{
+    display: flex;
+    justify-content: space-between;
+    width: 720px;
+    margin: auto;
+}
+.timetypebuttons >div{
+    border-radius: 50%;
+    border:  #dbf8fa solid 2px;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.21);
+    cursor: pointer;
+    width: 170px;
+    height: 170px;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0), #dadada);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.timetypebuttons >div:hover{
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0), #b5b5b5);
+}
+
+.activeTimeButton {
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0), #b5b5b5) !important;
+}
+
+.timetypebuttons p{
+    text-transform: uppercase;
+    color:#000000;
+    font-weight: bolder;
+}
+
+.timetypebuttons .icon{
+    font-size: 60px;
+}
+
+.timetypebuttons p span{
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    color:  #16bbcb ;
+    line-height: 50px;
+}
+
+
+.timecontrolbuttons{
+    justify-content: space-between;
+    width: 700px;
+    display: flex;
+    margin: 30px auto;
+}
+
+.timecontrolbuttons button{
+    font-family: 'Lato', sans-serif;
+    width: 340px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.timecontrolbuttons-stop{
+    display: none;
+}
+
+.button-start{
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.21);
+    border-radius: 15px;
+    border: 2px solid #16bbcb ;
+    color: #000000;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0), #dadada);
+}
+.button-start:hover{
+    background-color: #16bbcb ;
+}
+
+.button-reset{
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.21);
+    border-radius: 15px;
+    border:  #dbf8fa solid 2px;
+    color: #000000;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0), #dadada);
+}
+.button-reset:hover{
+    background-color: #dbf8fa;
+}
+
+/* time-started */
+main.time-started .timecontrolbuttons-stop{
+    display: block;
+}
+
+main.time-started .timecontrolbuttons-start{
+    display: none;
+}
+
+/*  time-notsomanyleft */
+main.time-notsomanyleft{
+    opacity: 0.95;
+    animation: pulse 2s infinite alternate;
+}
+
+main.time-notsomanyleft .timer, main.time-notsomanyleft .timeleft{
+    background: none;
+    -webkit-backgroundclip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+main.time-notsomanyleft .timeleft {
+    color: #dbf8fa ; 
+}
+
+main.time-notsomanyleft .timer {
+    color: #000000; 
+}
+
+main.time-notsomanyleft .button-start{
+    border-color: #16bbcb ;
+}
+
+main.time-notsomanyleft .button-reset {
+    border-color: #dbf8fa;
+}
+
+main.time-notsomanyleft .timetypebuttons >div{
+    background: #ffffff;
+}
+main.time-notsomanyleft .timetypebuttons >div:hover{
+    background: #dddddd;
+}
+/*main.time-notsomanyleft .logo{
+    background-image: url('logow.png');
+
+}
+
+/* time-ended */
+main.time-ended .timer, main.time-ended .timeleft{
+     
+color: #c74544;
+}
+main.time-ended .timeleft-ended{
+    display: block;
+}
+main.time-ended .timeleft-stoper{
+    display: none;
+}
+main.time-ended .timeleft-left{
+    display: none;
+}
+/* time-stoper */
+main.time-stoper .timeleft-stoper{
+    display: block;
+}
+main.time-stoper .timeleft-left{
+    display: none;
+}
+.main.time-stoper .timeleft-ended{
+    display: none;
+}
