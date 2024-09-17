@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Sigma clicker</h1>
+    <div class="container">
+        <table class="tabela"border="1px">
+            <tr><td>Zasoby</td><td>Ilosc</td><td>Sigmuj</td></tr>
+            <tr><td>Gigachad</td><td id="gigachad"></td><td><input type="button" value="Chaduj" onclick="addGigachad()"></td></tr>
+            <tr><td>Aura</td><td id="aura"></td><td><input type="button" value="Aura gnom" onclick="addAura()"></td></tr>
+            <tr><td>Rizz</td><td id="rizz"></td><td><input type="button" value="Rizzuj" onclick="addRizz()"></td></tr>
+            <tr><td>Robotnik</td><td id="robotnik"></td><td><input type="button" value="Zatrudnij" onclick="addRobotnik()"></td></tr>
+            <tr><td>Kobiety</td><td id="kobiety"></td><td>idz do sklepu </td></tr>
+            <tr><td>Fortite dance</td><td id="fortnite_dance"></td><td>idz do sklepu </td></tr>
+        </table>
+    </div>  <br>
+
+    <div id="komunikat"></div>
+
+
+    <div class="zakupy">
+        <h2>sklep</h2>
+        <table border="1px">
+            <tr><td>Produkt</td><td>Cena/kup</td></tr>
+            <tr><td>Kobiety</td><td><input type="button" value="10 rizz, 200 aura, 20 gigachad" onclick="buyWomen()"></td></tr>
+            <tr><td>Fortnite dance</td><td><input type="button" value="10000 rizz, 200 aura, 20 gigachad" onclick="buyFortnite_dance()"></td></tr>
+        </table>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

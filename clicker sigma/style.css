@@ -1,0 +1,58 @@
+body {
+    background: url(patrick-bateman-sigma-face.avif);
+    background-size: cover;
+    text-align: center;
+}
+
+* {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+td {
+    padding: 10px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.tabela {
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid pink;
+    display: flex;
+    color: white;
+}
+
+.tabela input {
+    border-radius: 10px;
+    border: none;
+    width: 80px;
+    height: 30px;
+}
+
+h1 {
+    color: white;
+    font-size: 160px;
+}
+
+.zakupy {
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#komunikat {
+    color: white;
+    font-size: 30px;
+    float: left;
+    margin-left: 60px;
+}
