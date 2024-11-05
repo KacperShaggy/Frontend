@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #3498db;
+    margin: 1px;
+    display: inline-block;
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
