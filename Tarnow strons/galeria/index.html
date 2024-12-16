@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Nagłówek -->
+    <header>
+        <h1>Tarnów - galeria zdjeć</h1>
+    </header>
+
+    <!-- Kontener z obrazem -->
+    <div class="gallery-container">
+        <div class="arrow left" onclick="changeImage(-1)">&#10094;</div>
+        <img id="gallery-image" src="tarnow1.jpg" alt="Gallery Image">
+        <div class="arrow right" onclick="changeImage(1)">&#10095;</div>
+    </div>
+
+    <!-- Stopka -->
+    <footer>
+        <p>Galeria 2024 &copy; Wszelkie prawa zastrzeżone</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
